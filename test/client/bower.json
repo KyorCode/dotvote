@@ -1,0 +1,23 @@
+{
+  "name": "dotvote",
+  "version": "0.0.0",
+  "homepage": "https://github.com/KyorCode/dotvote",
+  "authors": [
+    "kyorcode <t-c@live.be>"
+  ],
+  "description": "dotvote",
+  "keywords": [
+    "dotvote"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "lib"
+  ],
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "sinon": "~1.7.3",
+    "chai": "~1.8.1",
+    "requirejs": "~2.1.10"
+  }
+}

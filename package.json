@@ -1,0 +1,42 @@
+{
+  "name": "dotvote",
+  "version": "0.0.0",
+  "description": "Dot voting in Js",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KyorCode/dotvote.git"
+  },
+  "keywords": [
+    "dotvote"
+  ],
+  "author": "KyorCode (t-c@live.be)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyorCode/dotvote/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-markdown": "~0.5.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "bower": "~1.2.8",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-concurrent": "~0.4.3",
+    "npm-check-updates": "~1.2.0",
+    "grunt-mocha": "~0.4.10",
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0",
+    "sinon": "~1.7.3",
+    "superagent": "~0.16.0"
+  },
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
