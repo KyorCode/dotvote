@@ -131,4 +131,12 @@ module.exports = function(grunt) {
     grunt.registerTask('watchit', ['concurrent'])
     grunt.registerTask('install', ['bower:webapp', 'bower:tests']);
     grunt.registerTask('tests', ['mocha:client']);
+
+    grunt.registerTask('servertest', 'run mocha server tests', function() {
+        var done = this.async();
+        require('child_process').exec('make test', function(err, stdout) {
+            grunt.log.write(stdout);
+            done(err);
+        });
+    });
 };
