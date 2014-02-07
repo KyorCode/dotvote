@@ -4,7 +4,7 @@
   "description": "Dot voting in Js",
   "main": "src/index.js",
   "scripts": {
-    "test": "make test"
+    "test": "grunt servertest"
   },
   "repository": {
     "type": "git",
