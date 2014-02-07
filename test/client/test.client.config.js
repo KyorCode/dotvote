@@ -8,7 +8,8 @@ require.config({
 
 require([
     'chai',
-    'sinon'
+    'sinon',
+    'test/SomeBasicTest'
 ], function (chai) {
     "use strict";
     window.expect = chai.expect;

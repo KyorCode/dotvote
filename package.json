@@ -4,7 +4,7 @@
   "description": "Dot voting in Js",
   "main": "src/index.js",
   "scripts": {
-    "test": "grunt servertest --target=travis"
+    "test": "grunt tests --target=travis"
   },
   "repository": {
     "type": "git",
@@ -30,11 +30,11 @@
     "grunt-bower-task": "~0.3.4",
     "grunt-concurrent": "~0.4.3",
     "npm-check-updates": "~1.2.0",
-    "grunt-mocha": "~0.4.10",
     "mocha": "~1.17.1",
     "chai": "~1.9.0",
     "sinon": "~1.7.3",
-    "superagent": "~0.16.0"
+    "superagent": "~0.16.0",
+    "grunt-mocha-phantomjs": "~0.4.0"
   },
   "dependencies": {
     "express": "~3.4.8"

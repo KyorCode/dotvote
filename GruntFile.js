@@ -107,13 +107,11 @@ module.exports = function(grunt) {
                 }
             }
         },
-        mocha: {
-            client: {
-                files: ['test/ClientTestRunner.html'],
-                options: {
-                    reporter: 'Spec'
-                }
-            }
+        mocha_phantomjs:{
+            options:{
+                report:'spec'
+            },
+            all: ['test/client/*.html']
         }
     });
 
@@ -125,19 +123,22 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-mocha');
+    grunt.loadNpmTasks('grunt-mocha-phantomjs');
 
     grunt.registerTask('build', ['jshint', 'less:build', 'uglify:build', 'markdown:all']);
     grunt.registerTask('watchit', ['concurrent'])
     grunt.registerTask('install', ['bower:webapp', 'bower:tests']);
-    grunt.registerTask('tests', ['mocha:client']);
 
-    grunt.registerTask('servertest', 'run mocha server tests', function() {
+    grunt.registerTask('servertests', 'run mocha server tests', function() {
         var done = this.async();
         var target = grunt.option('target') || '';
         require('child_process').exec('make test nodeenv=' + target, function(err, stdout) {
             grunt.log.write(stdout);
             done(err);
         });
+    });
+
+    grunt.registerTask('tests', 'run all tests', function() {
+        grunt.task.run(['mocha_phantomjs', 'servertests']);
     });
 };
