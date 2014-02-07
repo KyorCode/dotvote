@@ -19,10 +19,12 @@ after(function(done) {
 });
 
 describe("Server suite:", function() {
-    it("should be available", function(done) {
-        request.get(host).end(function(res) {
-            expect(res).to.exist;
-            done();
+    describe("the server", function() {
+        it("should be available", function(done) {
+            request.get(host).end(function(res) {
+                expect(res).to.exist;
+                done();
+            });
         });
     });
 });
