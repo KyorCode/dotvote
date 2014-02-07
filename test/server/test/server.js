@@ -1,9 +1,10 @@
 var expect = require('chai').expect;
 var request = require('superagent');
 var server = require('../../../src/server');
+var config = require('../../../src/config');
 
 var instance;
-var host = process.env.IP + ':' + process.env.PORT;
+var host = config().ServerAdres;
 
 before(function(done) {
     instance = server.boot();

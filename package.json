@@ -4,7 +4,7 @@
   "description": "Dot voting in Js",
   "main": "src/index.js",
   "scripts": {
-    "test": "grunt servertest"
+    "test": "grunt servertest --target=travis"
   },
   "repository": {
     "type": "git",

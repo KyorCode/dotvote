@@ -2,7 +2,7 @@ REPORTER = spec
 TESTS = test/server/test/*.js
 
 test:
-		@NODE_ENV=test ./node_modules/.bin/mocha \
+		@NODE_ENV=$(nodeenv) ./node_modules/.bin/mocha \
 				--reporter $(REPORTER) \
 				--colors \
 				--ui bdd \

@@ -134,7 +134,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('servertest', 'run mocha server tests', function() {
         var done = this.async();
-        require('child_process').exec('make test', function(err, stdout) {
+        var target = grunt.option('target') || '';
+        require('child_process').exec('make test nodeenv=' + target, function(err, stdout) {
             grunt.log.write(stdout);
             done(err);
         });
